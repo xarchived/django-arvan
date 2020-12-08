@@ -15,7 +15,7 @@ setup(
     name=name,
     version=version,
     license='apache-2.0',
-    description='Clean all migrations files and drop whole databases',
+    description='Access Arvan cloud storage API from Django ',
     long_description=readme,
     long_description_content_type='text/markdown',
     author=owner.capitalize(),
@@ -26,7 +26,7 @@ setup(
         'Issue tracker': f'https://github.com/{owner}/{name}/issues',
     },
     packages=find_packages(),
-    install_requires=['django'],
+    install_requires=['django', 'boto3'],
     python_requires='>=3.6',
     zip_safe=False,
     classifiers=[
