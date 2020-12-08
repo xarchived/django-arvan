@@ -6,9 +6,6 @@ from django.views.decorators.csrf import csrf_exempt
 from django.views.decorators.http import require_http_methods
 from getter import get_setting
 
-access_key = '160a8999-6a17-4834-b112-3d617f7716d8'
-secret_key = 'd58e63a15ca0c4f6e294c1f9ea8f2bd353553b9c723f592d21103a224407bf3a'
-endpoint = 'https://s3.ir-thr-at1.arvanstorage.com'
 session = boto3.session.Session()
 
 s3_client = session.client(
