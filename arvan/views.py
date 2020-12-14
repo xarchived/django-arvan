@@ -22,4 +22,9 @@ def generate_request(request):
     bucket_name = get_setting('ARVAN', 'BUCKET_NAME')
     file_name = secrets.token_urlsafe(24)  # 32 characters
 
-    return JsonResponse(s3_client.generate_presigned_post(bucket_name, file_name))
+    return JsonResponse(s3_client.generate_presigned_post(
+        bucket_name,
+        file_name,
+        Fields={'acl': 'public-read'},
+        Conditions=[{'acl': 'public-read'}],
+        ExpiresIn=600))
