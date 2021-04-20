@@ -27,4 +27,5 @@ def generate_request(request):
         file_name,
         Fields={'acl': 'public-read'},
         Conditions=[{'acl': 'public-read'}],
-        ExpiresIn=600))
+        ExpiresIn=600),
+    )
